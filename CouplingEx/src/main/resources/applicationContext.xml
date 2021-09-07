@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+<!-- 	<context:component-scan base-package="com.company.couplingex"></context:component-scan> -->
+	<!-- 
+	<bean id="tv" class="com.company.couplingex.SamsungTV" p:speaker-ref="apple" p:price="2700000">
+	 	
+		<constructor-arg index="0" ref="sony"></constructor-arg>
+		<constructor-arg index="1" value="270000"></constructor-arg>
+	 
+	 	<property name="speaker" ref="apple"></property>
+	 	<property name="price" value="3000000"></property>
+	</bean>
+
+	<bean id="sony" class="com.company.couplingex.SonySpeaker"/>
+	
+	<bean id="apple" class="com.company.couplingex.AppleSpeaker"/>
+ 	-->
+	<!-- 어노테이션과 xml 설정 병행 -->
+	<beans>
+		<context:component-scan base-package="com.company.couplingex"/>
+		<bean class="com.company.couplingex.SonySpeaker"></bean>
+	</beans>
+</beans>
